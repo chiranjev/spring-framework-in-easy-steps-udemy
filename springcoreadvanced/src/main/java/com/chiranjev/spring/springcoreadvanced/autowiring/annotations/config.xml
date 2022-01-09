@@ -8,14 +8,25 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <context:property-placeholder location="com/chiranjev/spring/springcore/propertyplaceholder/database.properties" />
-    
-    <bean class="com.chiranjev.spring.springcore.propertyplaceholder.MyDAO"
-    	name="myDAO" >
-    	<constructor-arg>
-    		<value>${dbServer}</value>
-    	</constructor-arg>
-   	</bean>
+	
+	<bean class = "com.chiranjev.spring.springcoreadvanced.autowiring.annotations.Address" 
+		name="address123"
+		p:hno="123"
+		p:street="constructor injection street"
+		p:city="constructor injection city"
+	/>
+	
+	
+	<bean class = "com.chiranjev.spring.springcoreadvanced.autowiring.annotations.Address" 
+		name="address456"
+		p:hno="456"
+		p:street="constructor injection street"
+		p:city="constructor injection city"
+	/>
+	
+ 	 <bean class="com.chiranjev.spring.springcoreadvanced.autowiring.annotations.Employee" 
+		name="employee"
+		/>
 	
 	<context:annotation-config />
 
